@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIRALYZE | Análise de produtos e vídeos virais no TikTok Shop</title>
+    <meta
+      name="description"
+      content="VIRALYZE é um SaaS premium para analisar produtos, creators, videos virais, GMV e oportunidades no TikTok Shop."
+    />
+    <meta name="application-name" content="VIRALYZE" />
+    <meta name="apple-mobile-web-app-title" content="VIRALYZE" />
+    <meta property="og:title" content="VIRALYZE | TikTok Shop Viral Intelligence" />
+    <meta
+      property="og:description"
+      content="Analise produtos, videos virais, creators e GMV com uma interface dark premium para TikTok Shop."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:title" content="VIRALYZE" />
+    <meta
+      name="twitter:description"
+      content="SaaS de análise de produtos e vídeos virais para TikTok Shop."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="side-nav" aria-label="Navegacao principal">
+      <a class="brand-mark" href="#" aria-label="VIRALYZE">VIRALYZE</a>
+      <nav>
+        <a class="is-active" href="#" aria-label="Descobrir"><span>⌘</span><small>Radar</small></a>
+        <a href="#" aria-label="Videos salvos"><span>◇</span><small>Salvos</small></a>
+        <a href="#" aria-label="Insights"><span>↗</span><small>Insights</small></a>
+        <a href="#" aria-label="Listas"><span>≡</span><small>Listas</small></a>
+      </nav>
+      <a class="nav-settings" href="#" aria-label="Configuracoes"><span>⚙</span></a>
+    </aside>
+
+    <main class="app-shell">
+      <nav class="topbar" aria-label="Ferramentas">
+        <div class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Buscar produto viral, creator, nicho ou palavra-chave..." />
+          <button type="button">Pesquisar</button>
+        </div>
+        <div class="topbar-actions">
+          <span class="status-pill">60/60</span>
+          <span class="status-pill">30/30</span>
+          <button class="icon-chip" type="button" aria-label="Notificacoes">⌁</button>
+          <button class="profile-chip" type="button" aria-label="Perfil">PS</button>
+        </div>
+      </nav>
+
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">TikTok Shop viral intelligence</p>
+          <h1>VIRALYZE</h1>
+        </div>
+        <div class="header-stats" aria-label="Resumo">
+          <article>
+            <span data-total-creators>0</span>
+            <strong>Creators</strong>
+          </article>
+          <article>
+            <span data-top-views>0</span>
+            <strong>Maior video</strong>
+          </article>
+          <article>
+            <span data-total-gmv>R$ 0</span>
+            <strong>GMV exibido</strong>
+          </article>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="Filtros">
+        <div class="niche-row" data-niches></div>
+
+        <div class="filter-grid">
+          <label>
+            <span>Pais</span>
+            <select data-country>
+              <option>Brasil</option>
+            </select>
+          </label>
+          <label>
+            <span>Periodo</span>
+            <select data-period>
+              <option>Ultimos 7 dias</option>
+              <option>Ultimos 30 dias</option>
+            </select>
+          </label>
+          <label>
+            <span>Ordenar por</span>
+            <select data-sort>
+              <option value="gmv">Mais faturados (R$)</option>
+              <option value="views">Video mais viral</option>
+              <option value="units">Mais unidades</option>
+              <option value="engagement">Maior engajamento</option>
+            </select>
+          </label>
+          <button class="clear-button" type="button" data-clear>Limpar filtros</button>
+        </div>
+      </section>
+
+      <section class="creator-grid" data-creator-grid aria-label="Top creators"></section>
+
+      <section class="value-strip" aria-label="Beneficios">
+        <article><span>◎</span><strong>Viralize antes</strong><p>Produtos e videos em alta no TikTok Shop.</p></article>
+        <article><span>↗</span><strong>Inteligencia de GMV</strong><p>Dados claros para decisoes de alto valor.</p></article>
+        <article><span>ϟ</span><strong>Sinal em tempo real</strong><p>Tendencias, creators e demanda sem ruido.</p></article>
+        <article><span>◇</span><strong>Precisao premium</strong><p>Leitura estruturada para crescimento rapido.</p></article>
+      </section>
+    </main>
+
+    <template id="creator-card-template">
+      <article class="creator-card">
+        <div class="video-panel">
+          <img class="video-thumb" alt="" />
+          <button class="play-button" type="button" aria-label="Ver video viral">
+            <span aria-hidden="true"></span>
+          </button>
+          <div class="rank-badge"></div>
+          <div class="video-overlay">
+            <span class="niche-pill"></span>
+            <strong class="video-title"></strong>
+          </div>
+        </div>
+
+        <div class="product-row">
+          <img class="product-image" alt="" />
+          <div>
+            <strong class="product-name"></strong>
+            <span class="product-price"></span>
+          </div>
+        </div>
+
+        <div class="creator-row">
+          <img class="avatar" alt="" />
+          <div>
+            <strong class="creator-name"></strong>
+            <a class="creator-handle" target="_blank" rel="noreferrer"></a>
+          </div>
+        </div>
+
+        <dl class="metrics">
+          <div>
+            <dt>Views</dt>
+            <dd class="metric-views"></dd>
+          </div>
+          <div>
+            <dt>Likes</dt>
+            <dd class="metric-likes"></dd>
+          </div>
+          <div>
+            <dt>GMV</dt>
+            <dd class="metric-gmv"></dd>
+          </div>
+          <div>
+            <dt>Unid.</dt>
+            <dd class="metric-units"></dd>
+          </div>
+        </dl>
+
+        <div class="actions">
+          <a class="action-button primary product-link" target="_blank" rel="noreferrer">Ver produto</a>
+          <a class="action-button creator-link" target="_blank" rel="noreferrer">Ver creator</a>
+        </div>
+      </article>
+    </template>
+
+    <dialog class="video-dialog" data-video-dialog>
+      <div class="dialog-shell">
+        <button class="dialog-close" type="button" data-dialog-close aria-label="Fechar">×</button>
+        <div class="dialog-media" data-dialog-media></div>
+        <aside class="dialog-info">
+          <div class="dialog-creator">
+            <img data-dialog-avatar alt="" />
+            <div>
+              <strong data-dialog-name></strong>
+              <a data-dialog-handle target="_blank" rel="noreferrer"></a>
+            </div>
+          </div>
+          <p data-dialog-caption></p>
+          <dl class="dialog-metrics">
+            <div><dt>Views</dt><dd data-dialog-views></dd></div>
+            <div><dt>Likes</dt><dd data-dialog-likes></dd></div>
+            <div><dt>Comentarios</dt><dd data-dialog-comments></dd></div>
+          </dl>
+          <div class="dialog-product">
+            <img data-dialog-product-image alt="" />
+            <div>
+              <strong data-dialog-product-name></strong>
+              <span data-dialog-product-price></span>
+            </div>
+          </div>
+          <a class="action-button primary" data-dialog-product-link target="_blank" rel="noreferrer">Ver produto</a>
+        </aside>
+      </div>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="supabase-api.js"></script>
+    <script src="creators-data.js"></script>
+    <script src="vyral-roupas-femininas-data.js"></script>
+    <script src="vyral-beleza-cuidados-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
