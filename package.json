@@ -1,0 +1,14 @@
+{
+  "name": "viralyze",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VIRALYZE - SaaS de analise de produtos e videos virais para TikTok Shop.",
+  "scripts": {
+    "supabase:test": "node scripts/test-supabase.mjs",
+    "supabase:seed": "node scripts/seed-supabase.mjs",
+    "supabase:seed:landing": "node scripts/seed-landing.mjs",
+    "supabase:seed:pricing": "node scripts/seed-pricing.mjs",
+    "check": "node --check script.js && node --check landing.js && node --check supabase-api.js && node --check scripts/test-supabase.mjs && node --check scripts/seed-supabase.mjs && node --check scripts/seed-landing.mjs && node --check scripts/seed-pricing.mjs",
+    "serve": "node scripts/serve-static.mjs"
+  }
+}
